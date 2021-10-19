@@ -8,22 +8,16 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 
-@Controller
-public class IndexController {
+@RestController
+@RequestMapping(value = "/user")
+public class UserController {
 
-    @RequestMapping(value = "/index")
-    public String index(Model model, ModelMap modelMap) {
 
-        model.addAttribute("hello", "thymeleaf");
-
-        modelMap.addAttribute("hi", "thymeleaf");
-
-        return "index";
-    }
 
     @GetMapping("/getCurrentUser")
     public Object getCurrentUser(Authentication authentication, HttpServletRequest request) {
