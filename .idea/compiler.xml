@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="oauth2-client" />
         <module name="oauth2-server" />
-        <module name="my-spring-cloud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
